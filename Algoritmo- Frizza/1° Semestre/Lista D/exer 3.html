@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 3</title>
+</head>
+<body>
+    <select id="tempo">
+        
+        <option value="0">1 opçao</option>
+
+        <option value="1">Uma vez ...</option>
+        
+        <option value="2">Num belo dia ...</option>
+        
+        <option value="3">Numa noite chuvosa... </option>   
+
+    </select><br><br>
+
+    <select id="animal">
+        
+        <option value="0">2 opçao</option>
+        
+        <option value="1">Um peixe morreu afogado</option>
+
+        <option value="2">Um gato tomou banho</option>
+
+        <option value="3">Um corvo se curvou  </option>
+
+    </select><br><br>
+
+        <button onclick="alerta()">Alerta</button>
+
+
+</body>
+</html>
+<script>
+
+    function alerta(){
+    
+        alert((Number(tempo.value)) + (Number(animal.value)))
+    }
+
+
+
+
+
+
+
+
+
+</script>

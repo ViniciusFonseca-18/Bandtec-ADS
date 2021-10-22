@@ -1,0 +1,63 @@
+<body>
+    <span id="id_sumir" style="display: block;">
+        <input id="in_leste" placeholder="Entregas para ZL"><br>
+        <input id="in_sul" placeholder="Entregas para ZS"><br>
+        <input id="in_norte" placeholder="Entregas para ZN"><br>
+        <input id="in_oeste" placeholder="Entregas para ZO"><br><br>
+        <button onclick="fun_carregar()">Carregar agenda</button><br>
+    </span><BR></BR>
+    <div id="id_aparecer" style="display: none;">
+        <div id="span_zl">Entregas ZL: <span id="final_1"></span></div><br>
+        <div id="span_zs">Entregas ZS: <span id="final_2"></span> </div><br>
+        <div id="span_zn">Entregas ZN: <span id="final_3"></span> </div><br>
+        <div id="span_zo">Entregas ZO: <span id="final_4"></span> </div><br>
+        <div id="entregas_res">Entregas restantes: <span id="rest"></span></div><br>
+    
+        <button onclick="entregar_zl()">Entregar ZL</button><br>
+        <button onclick="entregar_zs()">Entregar ZS</button><br>
+        <button onclick="entregar_zn()">Entregar ZN</button><br>
+        <button onclick="entregar_zo()">Entregar ZO</button><br>
+    </div>
+    
+        
+    </body>
+    
+    <script>
+    
+    function fun_carregar(){
+        id_sumir.style.display = 'none';
+        var x = Number(in_leste.value);
+        var y = Number(in_sul.value);
+        var z = Number(in_norte.value);
+        var w = Number(in_oeste.value);
+    
+        var t = x+y+z+w;
+        id_aparecer.style.display = 'block'
+        final_1.innerHTML = `${x}`;
+        final_2.innerHTML = `${y}`;
+        final_3.innerHTML = `${z}`;
+        final_4.innerHTML = `${w}`;
+        rest.innerHTML = `${t}`;
+    }
+    
+    function entregar_zl(){
+    final_1.innerHTML -= 1
+    rest.innerHTML -= 1
+    
+    }
+    function entregar_zs(){
+    final_2.innerHTML -= 1
+    rest.innerHTML -= 1
+    
+    }
+    function entregar_zn(){
+    final_3.innerHTML -= 1
+    rest.innerHTML -= 1
+    
+    }
+    function entregar_zo(){
+    final_4.innerHTML -= 1
+    rest.innerHTML -= 1
+    
+    }
+    </script>

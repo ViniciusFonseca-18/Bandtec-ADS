@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 3 </title>
+</head>
+<body>
+    <h2>Você tem direito ao auxílio emergencial</h2>
+
+    Informe o valor da renda individual do usuário:
+    <input id="ipt_ind" placeholder="Renda Indivaidual"><br><br>
+
+    Informe o valor da renda familiar do usuário:
+    <input id="ipt_fml" placeholder="Renda Familiar"><br><br>
+
+    <button onclick="terei ()">Terei o benefício?</button><br><br>
+ 
+    <div id="div_msg"></div>
+</body>
+</html>
+<script>
+    function terei (){
+        if (ipt_ind.value <= 2000 || ipt_fml.value <= 3000) {div_msg.innerHTML = "<span style= color:blue;>" + "Você terá direito ao auxílio" + "</span>"
+            
+        } else {div_msg.innerHTML =  "Sem direito ao auxílio"
+            
+        }
+    }
+
+
+</script>

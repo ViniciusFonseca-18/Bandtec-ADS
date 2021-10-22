@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorteio</title>
+</head>
+
+<body>
+    <h2>Sorteio de 1 - 100</h2>
+
+    Quantos números você quer sortear
+    <input id="ipt_sorte" onchange="mostrar()"><br>
+
+    <span id="span_msg"></span>
+
+</body>
+
+</html>
+<script>
+
+    function mostrar() {
+        
+        span_msg.innerHTML = " "
+
+        ax_cont = 0;
+
+        ax_sorteado = 0;
+
+        while (ax_cont < ipt_sorte.value) {
+            span_msg.innerHTML += ` ${ax_sorteado} <br>`
+            ax_sorteado = (Math.random() * 100).toFixed();
+
+            if (ax_sorteado % 6 == 0) {
+                break;
+            } 
+            ax_cont++;
+
+        }
+
+
+    }
+
+</script>

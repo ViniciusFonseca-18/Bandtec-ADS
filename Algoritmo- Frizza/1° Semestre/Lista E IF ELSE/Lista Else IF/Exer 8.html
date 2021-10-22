@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 8</title>
+</head>
+
+<body>
+    <h2>Elevadordo Frizza</h2>
+
+    informe a quantidade de homens no elevador?
+    <input id="ipt_hm" placeholder="Quantidade de Homens"><br><br>
+
+    informe a quantidade de mulheres no elevador?
+    <input id="ipt_mlh" placeholder="Quantidade de Mulheres"><br><br>
+
+    <button onclick="ligar ()">Ligar o Elevador</button><br><br>
+
+    <div style=color:green; id="div_msg"></div>
+
+    <div style="color: red;" id="div_msg2"></div>
+</body>
+
+</html>
+<script>
+
+
+    function ligar() {
+        var ax_peso = (Number(ipt_hm.value) * 90) + (Number(ipt_mlh.value) * 70);
+
+        var ax_retirar = (- 500) + ax_peso;
+
+        if (ax_peso <= 500) {
+            div_msg.innerHTML = "<b>" + "O elevador vai se mover, pois está com " + ax_peso + "Kg </b>"
+        }
+        else if (ax_peso > 500) {
+            div_msg2.innerHTML = "<b>" + "Alguém precisa descer, Precisa perder " + ax_retirar + " para mover o elevador"
+        }
+
+    }
+
+
+</script>

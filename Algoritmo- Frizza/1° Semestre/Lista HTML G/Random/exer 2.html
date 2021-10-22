@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 39</title>
+</head>
+<body>
+    <h2>Qual a maior torcida de São Paulo</h2>
+    
+    <button onclick="executar()"> Executar </button>
+
+    <div id="div_cor"></div><br>
+
+     <div id="div_sp"></div><br>
+
+    <div id="div_pal"></div><br>
+
+    <div id="div_san"></div><br> 
+
+
+</body>
+</html>
+<script>
+        function executar (){
+            var ax1 = Math.random()
+             var ax_1 = (ax1 * 3).toFixed()
+
+            if (ax_1 == '1') {div_cor.innerHTML = "<img src=https://sismf.museudofutebol.org.br/anexos/imagem/475781/w:640/h:640/c:0; width=150px; height=150px;>"}
+
+            if (ax_1 == '2'){div_sp.innerHTML =  `<img src="https://a.espncdn.com/i/teamlogos/soccer/500/2026.png" width=150px; height=150px;>`}
+
+            if (ax_1 == '3'){div_pal.innerHTML = `<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Palmeiras_logo.svg/1200px-Palmeiras_logo.svg.png" width=150px; height=150px;>`}
+
+             if (ax_1 == '4'){div_san.innerHTML = `<img src="https://www.pngfind.com/pngs/m/225-2253443_santos-fc-escudo-png-logo-do-santos-png.png" width=150px; height=150px;>`}
+        }
+</script>   

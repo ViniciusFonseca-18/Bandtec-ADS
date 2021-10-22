@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 16</title>
+</head>
+
+<body>
+    <h2>Qual o seu número da sorte ?</h2>
+
+    Insira o seu nome:
+    <input id="ipt_nome" placeholder="Seu Nome"><br><br>
+    
+    Insira o seu primeiro número da sorte:
+    <input id="ipt_nmr1" placeholder=" Ex: 5.309 "><br><br>
+
+    Insira o seu segundo número da sorte:
+    <input id="ipt_nmr2" placeholder=" Ex: 5.309 "><br><br>
+
+    Insira o seu terceiro número da sorte:
+    <input id="ipt_nmr3" placeholder=" Ex: 5.309 "><br><br>
+
+
+    <button onclick="sorteio()">Sortear</button><br><br>
+    <div id="div_msg"></div>
+
+</body>
+</html>
+<script>
+
+    var contador = 0;
+
+    function sorteio() {
+    
+        contador ++;
+
+        var ax1 = Math.random().toFixed(3)
+        ax1 = Math.random().toFixed(3) * 9 + 1;
+          
+        if (ipt_nmr.value < 1 || ipt_nmr.value > 10){alert(`Esse número inserido não foi aceito`)}
+
+        if(ipt_nmr1.value == ax1 || ipt_nmr2.value == ax1 || ipt_nmr3.value == ax1){
+            div_msg.innerHTML = `<h2>Parabéns, ${ipt_nome.value} você foi sorteado(a) após ${contador} sorteios! </h2>`}
+    
+
+    }   
+
+</script>

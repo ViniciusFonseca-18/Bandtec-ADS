@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina do Vini</title>
+    </head>
+    <body>
+        <h2>Exercicio 8</h2><br>
+        Qual o salário do trabalhador?
+        <input id="trabalhador" type="nunber" placeholder="Salario em R$"><br><br>
+        <button onclick="calcule()"> Calcular os descontos</button>
+        <div id="caixa"></div>
+    </body>
+    </html>
+    
+    <script>
+    function calcule(){var nome = trabalhador.value
+        var calculoIR ='${Number(trabalhador.value) * 0.1';
+        var calculoINSS ='${Number(trabalhador.value) * 0.2';
+        var calculodesconto ='${Number(calculoIR) + Number(calculoINSS)}';
+        var calculoresultado ='${Number(trabalhador) - Number(calulodescontos)}';
+        caixa.innerHTML = 'Seus descontos serão de: <br>'
+                            IR:R$${calculoINSS} <br>
+                            INSS:R$${calculoIR} 
+                            Total de descontos: R$${calculodesconto} <br>
+                            Total do salário, após o descontos é de: R$${calculoresultado} <br>
+                            trabalhador.value = ' ';
+                         
+                            }
+
+    </script>

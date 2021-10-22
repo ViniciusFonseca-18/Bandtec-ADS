@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 1 </title>
+</head>
+<body>
+    <h2>Sistema de avaliação de Atendimento</h2>
+
+    Informe a nota de Atendimento:
+    <input id="ipt_nota" placeholder="Nota de Atendimento">
+
+    <button onclick="avaliar ()">Avaliar Atendimento</button>
+
+    <div id="nota"></div>
+
+    
+</body>
+</html>
+<script>
+
+    function avaliar (){
+    if(ipt_nota.value < 0 && ipt_nota.value > 10){nota.innerHTML = "Sua Nota foi invalida"}
+
+    if (ipt_nota.value >= 0 && ipt_nota.value <5) {nota.innerHTML = "Sua nota não foi aprovada"}
+
+    if (ipt_nota.value <= 5 || ipt_nota.value >=6) {nota.innerHTML = "Sua nota foi neutra"}
+
+    if (ipt_nota.value > 6 ) {nota.innerHTML = "Sua nota foi aprovada"}
+    }
+
+
+</script>

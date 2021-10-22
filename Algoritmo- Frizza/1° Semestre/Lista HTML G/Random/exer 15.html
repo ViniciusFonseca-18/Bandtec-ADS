@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 15</title>
+</head>
+<body>
+    <h2>Sorteio hahah</h2>
+
+    Números pares: <span id="par">0</span><br><br> 
+    Números ímpares: <span id="ímpar">0</span><br><br>
+
+    <button onclick="sorteio ()">Sortear Número</button><br><br>
+    <div id="div_msg"></div>
+
+</body>
+</html>
+<script>
+
+    var par = 0
+    par = par.value % 2;
+
+    var ímpar = 0
+    ímpar = ímpar.value % 2;
+
+    function sorteio(){
+        var ax1 = Math.random();
+        ax1 = Math.random() * (-21) + (-30);
+
+        div_msg.innerHTML += `O número sorteado foi : ${ax1} <br>`
+
+        if (par == 0) {par.innerHTML = `1`
+            
+        } else {ímpar.value = `1`
+            
+        }
+    }
+
+
+</script>

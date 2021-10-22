@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina do Vini</title>
+    </head>
+    <body>
+        <h2>Exercicio 7</h2><br>
+        Qual o nome do <b>aluno ?</b>
+        <input id="Aluno" type="text" placeholder="Nome do aluno"><br><br>
+
+        Quantidade de aulas do <b>curso?</b>
+        <input id="Aulas" type="text" placeholder="Quantidade de aulas"><br><br>
+
+        Quantidade de aulas que o <b>aluno faltou?</b>
+        <input id="Faltas" type="text" placeholder= "Quantidade de Faltas"><br><br>
+    
+        <button onclick="Calcular()">Calcular a Frequência</button><br>
+        <div id= div_msg></div>
+    
+    </body>
+    </html>
+
+    <script>
+        function Calcular(){
+            div_msg.innerHTML += "Olá," + Aluno.value + "!" + " " + "Sua frequência foi de" + "<u>" + "<b>" + "R$" +  Faltas.value + "</i>" + "</b>" 
+            
+            }
+           
+            var porcentagem_faltas= Number %(Faltas.value) ** (1/Aulas.value)
+              
+             </script>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 4</title>
+</head>
+
+<body>
+    <h2>Qual a frequência do aluno?</h2>
+
+    Informe a sua frequência:
+    <input id="ipt_freq" placeholder="Frenquência">
+
+    <button onclick="analisar ()">Analisar a frequência</button><br><br>
+
+    <div id="div_img"></div>
+
+</body>
+
+</html>
+<script>
+
+    function analisar(){
+
+    if (ipt_freq.value < 50) {
+        div_img.innerHTML = "<img src=https://1.bp.blogspot.com/-15rD4RtLczo/V9wLXA2b3YI/AAAAAAAABN4/yWDW04XG8oYzVEHHsQVW6WUOGwHjGGkBACLcB/s1600/wpa0911e5e_1a.png alt= Imagem do Aluno turista>"
+
+    }
+    else if(ipt_freq.value > 50){ 
+        div_img.innerHTML = "<img src=https://static.quizur.com/i/b/5747891e74cc93.67717206pessoas-inteligentes.jpg alt=imagem aluno estudioso>"}
+
+    }
+
+</script>

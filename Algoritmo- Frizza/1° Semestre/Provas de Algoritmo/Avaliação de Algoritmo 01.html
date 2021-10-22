@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Distribuidora Pedeágua</title>
+</head>
+<body>
+    <div id= "dados_entrada">
+
+   
+    <h1>Distribuidora Pedeágua</h1>
+    
+   <h2>Orçamento de Vendas</h2> 
+    
+    <b>Água Natural</b> <br>
+   
+    Entre com o valor da venda:
+   <input id="venda_nat" placeholder="Valor da Venda"><br>
+   <span id="ipt_sumir" style="display: block;"></span>
+
+   Entre com a quantidade desejada:
+   <input id="quanti_nat" placeholder="Quantidade">  <br><br>
+  
+    
+   <b>Água com Gás</b><br>
+
+    Entre com o valor da venda:     
+   <input id="venda_gas" placeholder="Valor da Venda"><br>
+   
+
+   Entre com a quantidade desejada:
+   <input id="quanti_gas" placeholder="Quantidade"><br><br>
+  
+   <img onclick=" carrinho ()" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0X2R_5A90Wgt1fwFrLamzsMVqwB3khmllHQ&usqp=CAU" 
+   alt="Imagem de um Carrinho de Compras" style="width: 40px; height: 40px;"> 
+  
+</div>
+   
+<div id="div_resultado" style=  ></div>
+
+            <h3>Análise Orçamentária:</h3>
+            Total de unidades deste orçamento: <b id="b_tot_unid"></b> <br>
+            Água Natural – Quantidade solicitada <b id="b_quant_natural" style="color: blue;"></b>
+            Valor Total da água natural: <b style="color: blue;">R$</b> <b id="b_quant_natural" style="color: blue;"></b> 
+            Água com Gás – Quantidade solicitada <b id="b_quant_gas" style="color: blue;"></b> Valor Total da água com gás: R$ 9999,99
+            Valor total deste Orçamento: R$ 9999,99
+            Neste orçamento a proporção do valor da Água Natural em relação ao total foi de: 99,9%
+            Neste orçamento a proporção do valor da Água com Gás em relação ao total foi de: 99,9%
+            A quantidade de Água Natural de 99.9% em relação ao total e a Água com Gás é: 99,9%
+
+
+
+
+
+
+</body>
+</html>
+
+<script>
+    function carrinho (){ 
+    dados_entrada.innerHTML = ''
+    div_resultado.style.display="Block"                      
+    
+                            `Análise Orçamentária <br>
+                          Total de unidades deste orçamento: ${Number(quanti_nat.value) + Number(quanti_gas.value)} unidades <br>
+                         Água Natural – Quantidade solicitada: ${Number(quanti_nat.value)} unidades  Valor Total da água natural: R$ ${venda_nat.value * quanti_nat.value},00 <br>
+                          Água com Gás – Quantidade solicitada: ${Number(quanti_gas.value)} unidades  Valor Total da água natural: R$ ${venda_gas.value * quanti_gas.value},00 <br>`
+        
+
+
+    }
+
+</script>
+ 

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 2</title>
+</head>
+
+<body>
+    <h2>Renda do Mensal de Tuvalu</h2>
+
+    Qual a renda Mensal?
+    <input id="ipt_renda" placeholder="Renda Mensal">
+
+    <button onclick="analisar ()">Analisar a renda</button><br><br>
+
+    <div id="div_msg" style="color: blue;"></div>
+
+</body>
+
+</html>
+<script>
+
+    function analisar() {
+        if (ipt_renda.value <= 250) { div_msg.innerHTML = "Você pertence a Classe E" }
+
+        else if (ipt_renda.value <= 900) { div_msg.innerHTML = "Você pertence a Classe D" }
+
+        else if (ipt_renda.value <= 2500) { div_msg.innerHTML = "Você pertence a Classe C" }
+
+        else if (ipt_renda.value <= 9500) { div_msg.innerHTML = "Você pertence a Classe B" }
+
+        else if (ipt_renda.value > 9500) { div_msg.innerHTML = "Você pertence a classe A" }
+    }
+
+</script>

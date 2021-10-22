@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 2</title>
+</head>
+<body>
+    
+    <h2>Consumo Anual de Refri</h2>
+    
+    Quantas latinhas de refri você toma por dia ?
+    <input id="ipt_quant" placeholder="Quantas Latinhas"><br><br>
+
+    <button onclick="analisar ()">Analizar</button><br><br>
+
+    <div id="div_msg"></div><br>
+    <div id="mensagem"></div>
+</body>
+</html>
+<script>
+     function analisar(){
+        var ax_total_anual = ipt_quant.value * 365
+        div_msg.innerHTML = "Foram consumidas <b> " + ax_total_anual + " </b> latinhas"
+        if (ax_total_anual >= 500){
+        mensagem.innerHTML = "<b> Cuidado com a Diabete ! </b>"}
+     }
+</script> 

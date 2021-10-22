@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Qual será a sua média?!</h3>
+
+    <span id="desaparecer">
+
+        Qual o seu nome?
+        <input id="ipt_nome" placeholder="Nome Completo"><br><br>
+
+        <div id="quantidade"></div><br>
+
+        <select id="nota_1">
+            <option>Qual a sua primeira nota?</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+        </select><br><br>
+
+        <select id="nota_2">
+            <option>Qual a sua segunda nota?</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+        </select><br><br>
+
+        <select id="nota_3">
+            <option>Qual a sua terceira nota?</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value=" 4">4</option>
+            <option value=" 5">5</option>
+            <option value=" 6">6</option>
+            <option value=" 7">7</option>
+            <option value=" 8">8</option>
+            <option value=" 9">9</option>
+            <option value=" 10">10</option>
+        </select><br><br>
+
+        <span style="display: block;"></span>
+
+        <button onclick="magica ()">Mágica</button><br><br>
+
+    </span>
+
+    <button id="misterm" style="display: none;" onclick="retornar ()">Retornar</button><br><br>
+    <div id="div_msg"></div>
+
+
+</body>
+
+</html>
+<script>
+
+    var aluno = 1
+    quantidade.innerHTML = "Aluno " + aluno
+
+    function magica() {
+        
+
+        misterm.style.display = 'block'
+
+        desaparecer.style.display = 'none'
+
+        var ax_media = (Number(nota_1.value) + Number(nota_2.value) + Number(nota_3.value)) / 3
+
+        if (ax_media.toFixed(2) >= 6) {
+            div_msg.innerHTML = "Olá " + ipt_nome.value + " Sua média é " + ax_media.toFixed(2) + "<b> Parabéns  </b>"
+
+        } else {
+            div_msg.innerHTML = "Olá " + ipt_nome.value + " sua média é " + ax_media.toFixed(2) + "<b> Você foi reporvado tente Novamente <b>"
+        }
+    }
+
+    function retornar() {
+        desaparecer.style.display = 'block'
+        ipt_nome.value = ""
+        nota_1.value = "Qual a sua primeira nota?"
+        nota_2.value = "Qual a sua segunda nota?"
+        nota_3.value = "Qual a sua terceira nota?"
+        div_msg.innerHTML = ""
+        misterm.style.display = 'none'
+
+        aluno++
+        quantidade.innerHTML = "Aluno " + aluno
+
+    }
+</script>

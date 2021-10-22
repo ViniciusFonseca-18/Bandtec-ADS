@@ -1,2 +1,2 @@
-# Bandtec-ADS
-Trabalhos e atividades realizadas na Faculdade.
+# Bandtec-1-Semestre
+Atividades e arquivos 1° semestre

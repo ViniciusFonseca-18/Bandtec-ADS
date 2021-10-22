@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exer 13</title>
+</head>
+<body>
+    <h2>Calculando a média</h2>
+
+    Qual a sua primeira nota?
+    <input id="ipt_nota1" placeholder="Primeira nota"><br><br>
+    
+    Qual a sua segunda nota?
+    <input id="ipt_nota2" placeholder="Segunda nota"><br><br>
+
+    <button onclick="calculo ()">Verificar a Situação</button>
+</body>
+</html>
+<script>
+
+    function calculo (){
+    var ax_media = (Number(ipt_nota1.value) + (Number(ipt_nota2.value))) /2
+    if (ax_media >= 6){alert("Parabéns, Foi aprovado")}
+    if (ax_media < 6){alert("Tente outra vez")}
+    }
+
+</script>

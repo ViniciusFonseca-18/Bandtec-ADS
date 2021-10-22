@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 4</title>
+</head>
+<body>
+    <h2>Rachando a Pizza entre amigos</h2> 
+
+    Qual o valor da pizza ?
+    <input id="ipt_pizza" placeholder="Valor da Pizza"><br><br>
+
+    Quantos amigos reunidos?
+    <input id="ipt_amigos" placeholder="Quantos amigos"><br><br>
+
+    <button onclick="dividir ()">Rola a pizza ?</button><br><br>
+
+    <div id="div_msg"></div><br>
+    <div id="mensagem"></div>
+</body>
+</html>
+<script>
+    function dividir (){
+    var ax_valor = (Number(ipt_pizza.value) / Number(ipt_amigos.value))
+        
+    div_msg.innerHTML ="<b>Cada amigo vai pagar R$ " + ax_valor + ",00 pela pizza </b>" 
+    
+    if (ax_valor > 20){ mensagem.innerHTML = "<b> Deu ruim ! Pizza muito cara! </b>"
+    }}
+
+</script>

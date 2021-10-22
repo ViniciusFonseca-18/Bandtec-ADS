@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 7</title>
+</head>
+<body>
+    <h2 style="font-family: Arial, Helvetica, sans-serif;">Banco Itado</h2>
+
+    Qual o saldo da sua conta?
+    <input id="ipt_saldo" placeholder="Saldo da Sua Conta"><br><br>
+
+    Qual o valor do débito?
+    <input id="ipt_debito" placeholder="Valor do Débito"><br><br>
+
+    <button onclick="analisar ()">Analisar a Conta</button><br><br>
+
+    <div id="div_msg"></div><br><br>
+
+    <div id="div_debito" style="color:red"></div>
+</body>
+</html>
+<script>
+    function analisar(){
+    var ax_calculo = (Number(ipt_saldo.value).toFixed(2) - (Number(ipt_debito.value).toFixed(2)))
+    if(ax_calculo >= 0){div_msg.innerHTML = " O saldo atual da conta corrente é <b> " + ax_calculo + "</b>"}
+    if(ax_calculo < 0){div_debito.innerHTML = "<b> O saldo atual da conta corrente é " + ax_calculo + "</b>" }
+    }
+</script>

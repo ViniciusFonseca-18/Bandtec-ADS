@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco KNAB</title>
+</head>
+<body>
+<div id="tela1" style="display: block;">
+        <h1>Seja bem vindo ao banco KNAB</h1> <br><br>
+        <h2>Simulação de Empréstimos e investimentos</h2><br>
+        <h4>Entre com os dados da sua conta:</h4><br>
+        <input id="iptConta" placeholder="Conta">
+        <input id="iptDigito" placeholder="Dígito">
+        <input id="iptSenha" placeholder="Senha" type="password"><br><br>
+        <button onclick="fun_simular()">Simular</button>
+</div>
+
+<div id="tela2" style="display: none;">
+        <h1>O banco KNAB é a sua melhor opção</h1><br>
+        <h2>Empréstimos e Investimentos com as melhores taxas do mercado</h2><br>
+        <h4>Entre com os dados  da sua simulação</h4><br><br>
+        Valor da operação: <input id="iptValor"><br><br>
+        <select name="Operações" id="selOperacao">
+            <option value="selecione">Selecione a Operação...</option>
+            <option value="emprestimo">Empréstimo</option>
+            <option value="investimento">Investimento</option>
+        </select>
+        <select name="prazos" id="selPrazo">
+            <option value="selecione">Selecione o prazo...</option>
+            <option value="curto">Curto</option>
+            <option value="medio">Médio</option>
+            <option value="longo">Longo</option>
+        </select><br><br><br>
+        <button onclick="fun_resultado()">Mostrar resultado</button><br>
+        <span id="teste"></span>
+</div>
+
+<div id="telaFinal" style="display: none;">
+        <h1>Simulação</h1><br><br>
+        <div id="tela3"></div><br><br><br>
+        <h3>Simulações anteriores</h3>
+        <div id="tela4"></div><br>
+        <button onclick="fun_resetar()">Voltar simulação</button>
+</div>
+</body>
+<script>
+        function fun_simular(){
+        var conta = iptConta.value;
+        var digito = iptDigito.value;
+        var senha = iptSenha.value;
+
+        if(conta != 0 ){
+            if(digito == conta % 11){
+                tela1.style.display = "none";
+                tela2.style.display = "block";
+                if(digito >=0 && digito <=3 && senha == "manaus"){
+                alert("Autorizado!");
+
+                }else if(digito >=4 && digito <=7 && senha == "recife"){
+                    alert("Autorizado!");
+    
+                }else if (digito > 7 && senha == "fortaleza"){
+                    alert("Autorizado!");
+
+                }else{
+                    alert("Não autorizado");
+                }
+            }else{
+                alert("Não autorizado");
+            }  
+        }else{
+            alert("Conta invalida");
+        }
+    }
+    function fun_resultado(){
+        var prazo = selPrazo.value;
+        var operacao = selOperacao.value;
+        var entradaValor = iptValor.value;
+
+        if(operacao == "selecione" && prazo == "selecione" && entradaValor <= 0){
+            alert("Preencha todos os campos");
+        }else if(prazo == "curto" || prazo == "medio"){
+            alert('Esta operação está condicionada ao seu perfil');
+            tela2.style.display = "none";
+            telaFinal.style.display = "block";
+            if(operacao == "emprestimo"){
+                fun_emprestimo();
+            }else{
+                fun_investimento();
+            }
+        }else if(prazo == "longo" && operacao == "investimento" || operacao == "emprestimo"){
+            fun_emprestimo();
+            tela2.style.display = "none";
+            telaFinal.style.display = "block";
+        }else{
+            fun_investimento();  
+        }
+
+    }
+
+    var simulacaoN = 0;
+    var texto = "";
+    function fun_emprestimo(){
+        simulacaoN ++;
+        var select = selPrazo.value;
+        var valor = iptValor.value;
+
+        if(select == "curto"){
+            tipoDeJuros = 0.24;
+        }
+        else if(select == "medio"){
+            tipoDeJuros = 0.16;
+        }
+        else if(select == "longo"){
+            tipoDeJuros = 0.10;
+        }
+        var calculo = valor * tipoDeJuros;
+        texto = `Simulação ${simulacaoN} – Para o empréstimo de R$${valor} no <b>${select}</b> prazo será cobrado os juros de R$ ${calculo.toFixed(2)} ao ano.`;
+        tela3.innerHTML = `${texto}`;
+
+    }
+    function fun_investimento(){
+        simulacaoN ++;
+        var select = selPrazo.value;
+        var valor = iptValor.value;
+
+        if(select == "curto"){
+            tipoDeJuros = 0.05;
+        }
+        else if(select == "medio"){
+            tipoDeJuros = 0.08;
+        }
+        else if(select == "longo"){
+            tipoDeJuros = 0.12;
+        }
+        var calculo = valor * tipoDeJuros;
+
+        texto = `Simulação ${simulacaoN} – Investindo R$${valor} no <b>${select}</b> prazo o seu rendimento será de R$ ${calculo.toFixed(2)} ao ano.`;
+
+        tela3.innerHTML = `${texto}`;
+    }
+
+    function fun_resetar(){
+        iptValor.value = ``;
+        selOperacao.value = "selecione";
+        selPrazo.value = "selecione";
+        tela2.style.display = "block";
+        telaFinal.style.display = "none";
+        tela4.innerHTML += `${texto}<br>`;
+    }
+
+</script>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliação de Algoritmo</title>
+</head>
+
+<body>
+
+    <h2>Aco Pip – AS MELHORES PIPOCAS DO BRASIL</h2><br>
+
+    
+
+        <select id="produto">
+            <option value="0">Escolha o sabor do produto</option>
+            <option value="Pipoca com Chocolate">Pipoca com Chocolate</option>
+            <option value="Pipoca com Caramelo">Pipoca com Caramelo</option>
+        </select><br><br>
+
+        <select id="embalagem">
+            <option value="0">Escolha o tamanho da embalagem</option>
+            <option value="Pacote Pequeno">Pacote Pequeno</option>
+            <option value="Pacote Grande">Pacote Grande</option>
+        </select><br><br>
+
+        Informe a quantidade:
+        <input id="quant_pp" placeholder="Quantidade de Pipocas"><br><br>
+
+
+        Informe a quantidade adicional de açúcar:
+        <input id="quant_açucar" placeholder="Entre 0 e 8"><br><br>
+
+        <div id="desaparecer" style="display:block;">
+
+            <button onclick="orçamento()">Orçar</button>
+
+        </div>
+
+        <div id="aparecer" style="display: none;">
+            <div id="div_msg"></div>
+            <div id="div_msg2"></div>
+
+            <button onclick="Novo()">Novo Orçamento</button>
+
+            <button onclick="comprar()">Comprar</button>
+
+
+         </div>
+</body>
+
+</html>
+<script>
+
+    function orçamento() {
+
+        desaparecer.style.display = "none"
+
+        aparecer.style.display = "Block"
+
+
+        // If alert erro (Validação)
+
+        //if () {alert("Erro no orçamento")}
+          //  else()
+        
+        // else if (produto.value == "0" || embalagem.value == "0" || quant_pp.value < 500 || quant_pp.value > 5000 || quant_açucar.value <0 || quant_açucar >8){desaparecer.style.display = "none" } 
+            
+        //  else if (produto.value == "0" || embalagem.value == "0" || quant_pp.value < 500 || quant_pp.value > 5000 || quant_açucar.value <0 || quant_açucar >8){aparecer.style.display = "none"}
+        
+            
+
+
+
+
+
+        // if alert quantidade da pipoca 
+
+        if (quant_pp.value < 500) { alert("Vendemos essa quantidade, somente no atacado") }
+
+        if (quant_pp.value > 5000) { alert("Para comprar essa quantidade, Consulte nosso PCP (planejamento e controle da produção)") }
+
+        
+        // if quantidade de açucar //
+
+        if (quant_açucar.value < 0 && quant_açucar.value > 8) { alert("Quantidade adicional de açúcar invalida") }
+
+
+
+        // var (Calculos)
+
+        var cara_peq = 1.10 * quant_pp.value;
+
+        var choco_peq = 1.20 * quant_pp.value;
+
+        var cara_gran = 1.70 * quant_pp.value;
+
+        var choco_gran = 1.80 * quant_pp.value;
+
+        var ax_calculo = 0;
+
+        var ax_adicional = ax_calculo * (0,07);
+
+        var ax_quant = quant_pp
+
+
+        // if - inner.html - ax_calculo
+
+        if (produto.value == "Pipoca com Caramelo" && embalagem.value == "Pacote Pequeno") { ax_calculo = cara_peq }
+
+        if (produto.value == "Pipoca com Chocolate" && embalagem.value == "Pacote Pequeno") { ax_calculo = choco_peq }
+
+        if (produto.value == "Pipoca com Caramelo" && embalagem.value == "Pacote Grande") { ax_calculo = cara_gran }
+
+        if (produto.value == "Pipoca com Chocolate" && embalagem.value == "Pacote Grande") { ax_calculo = choco_gran }
+
+
+        // inner.hmtl com o Resumo do orçamento (RESULTADO) 
+        
+        div_msg.innerHTML = `<h1>Resumo do Orçamento </h1><br>
+
+                        Quantidade Solicitada: ${quant_pp.value} <br><br>
+
+                        Embalagem Selecionada: ${embalagem.value} <br><br>
+
+                        Produto Selecionado: ${produto.value} <br><br>
+
+                        O Valor Total das Pipocas é de R$ ${ax_calculo}`
+
+        
+        // if calculo do açucar                
+
+        if (quant_açucar.value > 4) {
+            div_msg2.innerHTML = `Para essa quantidade adicional de açúcar será cobrado um adicional de R$ ${ax_adicional} ,
+             sendo que esse valor é 7% do ${ax_calculo}`
+        }
+
+    }
+
+    function comprar() {
+
+        var ax1 = Math.random().toFixed(1)
+        var ax2 = (ax1 * 2) + 3.5;
+        var ax_desc = (ax2 / ax_quant) * 100;
+
+
+        alert(`PARABÉNS!!! Você recebeu um bônus ${ax_desc} %, na sua próxima compra você terá um bônus de R$ ${ax2}`)
+
+
+    }
+
+    function novo(){
+
+    }
+
+</script>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>  
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 19</title>
+</head>
+<body>
+    <h3>Calculo da duração da obra</h3>
+    
+    Qauntos meses a reforma da casa levará?
+    <input id="ipt_meses" placeholder="Meses"><br><br>
+
+<button onclick="proj_sem ()">Ver Projeção Semanal</button><br><br>
+
+
+<button onclick="proj_men ()">Ver Projeção Mensal</button><br><br>
+
+
+<button onclick="Proj_total ()">Ver Projeção Total</button>
+<div id=div_msg></div>
+
+</body>
+</html>
+
+<script>
+
+    function proj_sem () {
+    div_msg.innerHTML = `O gasto semanal foi de: ${380*6}`;}
+
+     function proj_men () {
+    div_msg.innerHTML = `O gasto mensal foi de: ${380*24}`;}
+
+    function Proj_total (){
+    div_msg.innerHTML = `o gasto total da obra foi de: ${380 * 24 * ipt_meses.value}`;}
+    
+</script>

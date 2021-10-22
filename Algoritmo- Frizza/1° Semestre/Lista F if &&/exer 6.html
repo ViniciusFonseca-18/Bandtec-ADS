@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Qual a nota do aluno?</h2>
+
+    informe a sua nota:
+    <input id="ipt_nota" placeholder="Sua nota">
+
+    <button onclick="avaliar ()">Avaliar ALuno</button>
+
+</body>
+
+</html>
+<script>
+    function avaliar() {
+        if (ipt_nota.value < 6) { alert("Aluno não aprovado") }
+        
+        if (ipt_nota.value >= 8.5 && ipt_nota.value <= 10) {alert("Aluno Exemplar")}
+        
+        if (ipt_nota.value >= 6 && ipt_nota.value <8.5) {alert("Aluno comum e Aprovado!")}
+
+    }
+</script>

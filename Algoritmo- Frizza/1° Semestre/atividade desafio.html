@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade Desafio</title>
+</head>
+
+<body style="background-color: #55c5eb;">
+    
+    <h1>Seja Bem Vindo ao Banco KNAB</h1>
+
+    <h3>Simulação de Emprestimos e Investimentos</h3>
+
+    <span style="display: block;">
+    Entre com os dados de sua conta:<br><br>
+    <input id="conta" placeholder="Conta">
+    <input id="digito" placeholder="Dígito">
+    <input id="senha" placeholder="Senha"><br><br>
+
+   <button onclick="simule ()">Simular</button>
+</span>
+    
+
+
+
+
+</body>
+</html>
+<script>
+    function simule() {
+        
+        
+        if (conta.value > 0 && digito.value < 11) {} else{alert("A conta e / ou digito estão inválidos")}
+    
+        if (digito.value >=0 && digito.value <=3){alert("Sua senha é Manaus")}
+            
+        if (digito.value >=4 && digito.value <=7) {alert("Sua senha é recife")} 
+            
+        if (digito.value ==8 || digito.value ==9){alert("Sua senha é fortaleza")}
+   
+        // if(senha.value == "manaus" || senha.value == "recife" || senha.value == "fortaleza"){simule.style.display = 'none'}
+    }
+</script>

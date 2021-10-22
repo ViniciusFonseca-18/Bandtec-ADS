@@ -1,0 +1,70 @@
+
+/* Item 1 */
+.div1 { 
+    background-color: red;
+    width: 50px;
+    height: 50px;
+    border-style: solid;
+    border-width: 2 px;
+    margin: 100px;;
+}
+
+.div2{
+    background-color: black;
+    width: 50vw;
+    height: 50vh;
+    border-style: dashed;
+    border-color: red;
+    border-width: 10px;
+    margin-left: 100px;
+    margin-top: 100px;
+}
+
+/* Item 2 */
+.div3{
+    background-color: #ee82ee;
+    height: 250px;
+    width: 100vw;
+    display: flex;
+    max-height: 10vh;
+    vertical-align: auto;
+}
+
+.div_filho{
+    background-color: rgb(144, 240, 140) ;
+    height: 88px;
+    width: 75px;
+}
+
+.body{
+    background-color: #d3d3d3;
+
+}
+
+
+    /* Item 4 */
+.div4{
+    background-color: white;
+    height: 500px;
+    width: 50vw;
+    border-style:dotted;
+    border-color: black;
+    border-width: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.filho4{
+    background-color: yellow;
+    height: 50px;
+    width: 15%;
+}   
+
+.div5{
+    background-color: rgb(0, 128, 0);
+    color: white;
+    font-size: 30px;
+    padding: 50px;
+    margin-left: 50px;
+    margin-top: 50px;
+}

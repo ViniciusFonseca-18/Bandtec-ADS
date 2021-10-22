@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 5</title>
+</head>
+<body>
+    <h2>Qual a temperatura do ambiente?</h2>
+
+    informe a tempwratura do ambiente?
+    <input id="ipt_temp" placeholder="Temperatura">
+
+    <button onclick="analisar ()">Analisar o Clima</button>
+
+</body>
+</html>
+<script>
+    function analisar (){
+        if (ipt_temp.value < 21 || ipt_temp.value > 24  ) {alert("Alerta de desconforto!")}
+            
+        if(ipt_temp.value < 21) {alert("As pessoas vão ter hipotermia")}
+        
+        if (ipt_temp.value > 24){alert("As pessoas vão derreter")}
+    
+    }
+</script>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exer 12</title>
+</head>
+<body>
+<h2>Cofrinho</h2>
+
+Valor guardado no cofrinho: R$0,00 <br><br>
+<div id="guardar"></div>
+
+Quantidade do depósito feitas: 0
+
+Quantidade do depósito: 0
+
+Qual valor a ser depositado?
+<input id=ipt_dp placeholder="Valor do Deposito"><br><br>
+
+<button onclick="deposito ()">Depositar</button><br>
+
+<button onclick="Tirar ()">Tirar toda a grana</button>
+
+</body>
+</html>
+
+<script>
+function deposito () {
+    guardar.innerHTML = `<b> R$ ${ipt_dp.value},00 </b>`
+}
+
+
+
+
+
+
+</script>

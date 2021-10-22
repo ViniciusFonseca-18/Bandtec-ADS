@@ -1,0 +1,147 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-color: #000000;
+}
+
+.container{
+    width: 80%;
+    margin: 0 auto;
+
+}
+
+.header{
+    color: #32B9CD;
+    border-bottom: 3px solid #32B9CD;
+}  
+
+.header .container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.selecionado{
+    font-weight: bold;
+
+}
+
+.navbar{
+    width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+.header a {
+    text-decoration:none;
+    color: #32B9CD;
+}   
+
+.banner{
+    color: white;
+    height: 500px;
+    background-image:url("https://i.pinimg.com/originals/04/74/f3/0474f3de75fea0fafd34f98fcd398a7a.gif");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.banner .container{
+    height: 500px;
+    display: flex;
+    align-items: center;
+
+
+}
+
+.banner p{
+    
+    width: 500px;
+    margin: 0;
+    padding: 0;
+    width: 280px;
+    font-size: 36px;
+    margin-left: 350px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+.social{
+    background-color: #e5e5e5;
+    padding: 50px 0;
+
+}
+
+.social .container{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+
+}
+
+.social .tiutlo{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+
+}
+
+.social h2{
+    display: flex;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 50px;
+    justify-self: center;
+    align-self: center;
+    color: #e6005a;
+    text-align: center;
+    margin-top: 5vh;
+
+}
+
+.social .boxes{
+    display: flex;
+    margin-top: 30px;
+}
+
+.social .box{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    width: 33%;
+}
+
+.social .box img{
+    width: 150px;
+    align-self: center;
+
+}
+
+.social .tiutlo{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.footer{
+    background-color: #32B9CD;
+    height: 150px;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.footer .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h4{
+    margin: 0;
+    padding: 0;
+}

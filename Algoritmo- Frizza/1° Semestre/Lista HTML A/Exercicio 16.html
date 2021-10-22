@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página do Vini</title>
+</head>
+<body>
+ <h1>O que faz um triatleta?</h1>
+ <button onclick="alerta()">NADA</button><br><br>
+ <button onclick="tela()">CORRE</button><br><br>
+ <button onclick="mouse()">PEDALA</button><br><br>
+ <div id="div_alerta"></div>
+ </body>    
+ </html>
+
+ <script>
+ function alerta() {div_alerta.innerHTML= '<img src="nada.jpg";>'}
+
+ function tela() {div_alerta.innerHTML= '<img src="correr.jpg";>'}
+
+ function mouse() {div_alerta.innerHTML= '<img src="pedalar.jpg";>'}
+ 
+
+ </script>

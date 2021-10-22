@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 11 random</title>
+</head>
+<body>
+    <button onclick="fun_avaliar()">Avaliar</button><br>
+    <div id="sticker"></div><br>
+    <span id="notaRecebida"></span><br><br><br>
+    <button onclick="fun_media()">Equipe</button><br>
+    <span id="stickerMedia"></span><br>
+    <span id="mediaRecebida"></span><br><br>
+
+    <span id="teste1"></span><br>
+    <span id="teste2"></span>
+</body>
+<script>
+    var numerAvaliacoes = 0;
+    var soma = 0;
+    function fun_avaliar(){
+        var avaliacao = Math.random();
+        avaliacao = (avaliacao*5).toFixed(1);
+
+        if(avaliacao <= 0.5){
+            sticker.innerHTML = `<img src="https://i.imgur.com/YJl2m0Z.png" style="height: 250px;">`
+            notaRecebida.innerHTML = `Nota recebida: ${avaliacao}`;
+            
+            soma += Number(avaliacao);
+            numerAvaliacoes++;
+
+            //teste1.innerHTML = soma.toFixed(1);
+            //teste2.innerHTML = numerAvaliacoes;
+        }
+        else if(avaliacao <= 1.5){
+            sticker.innerHTML = `<img src="https://i.imgur.com/xEsDtz1.png" style="height: 250px;">`
+            notaRecebida.innerHTML = `Nota recebida: ${avaliacao}`;
+
+            soma += Number(avaliacao);
+            numerAvaliacoes++;
+
+            //teste1.innerHTML = soma.toFixed(1);
+            //teste2.innerHTML = numerAvaliacoes;
+        }
+        else if(avaliacao <= 3.5){
+            sticker.innerHTML = `<img src="https://i.imgur.com/b7uzDdK.png" style="height: 250px;">`
+            notaRecebida.innerHTML = `Nota recebida: ${avaliacao}`;
+
+            soma += Number(avaliacao);
+            numerAvaliacoes++;
+
+            //teste1.innerHTML = soma.toFixed(1);
+            //teste2.innerHTML = numerAvaliacoes;
+        }
+        else if(avaliacao <= 4.5){
+            sticker.innerHTML = `<img src="https://i.imgur.com/nu6GoFI.png" style="height: 250px;">`
+            notaRecebida.innerHTML = `Nota recebida: ${avaliacao}`;
+
+            soma += Number(avaliacao);
+            numerAvaliacoes++;
+
+            //teste1.innerHTML = soma.toFixed(1);
+            //teste2.innerHTML = numerAvaliacoes;
+        }
+        else if(avaliacao > 4.5){
+            sticker.innerHTML = `<img src="https://i.imgur.com/1pxafbU.png" style="height: 250px;">`
+            notaRecebida.innerHTML = `Nota recebida: ${avaliacao}`;
+
+            soma += Number(avaliacao);
+            numerAvaliacoes++;
+
+            //teste1.innerHTML = soma.toFixed(1);
+            //teste2.innerHTML = numerAvaliacoes;
+        }
+    }
+    function fun_media(){
+        var funSoma = soma;
+        var funNumero = numerAvaliacoes;
+        var conta =  funSoma/funNumero ;
+        mediaRecebida.innerHTML = `Sua média é ${conta.toFixed(1)}`;
+        if(conta <= 0.5){
+            stickerMedia.innerHTML = `<img src="https://i.imgur.com/YJl2m0Z.png" style="height: 250px;">`
+        }
+        else if(conta <= 1.5){
+            stickerMedia.innerHTML = `<img src="https://i.imgur.com/xEsDtz1.png" style="height: 250px;">`
+        }
+        else if(conta <= 3.5){
+            stickerMedia.innerHTML = `<img src="https://i.imgur.com/b7uzDdK.png" style="height: 250px;">` 
+        }
+        else if(conta <= 4.5){
+            stickerMedia.innerHTML = `<img src="https://i.imgur.com/nu6GoFI.png" style="height: 250px;">`
+        }
+        else if(conta > 4.5){
+            stickerMedia.innerHTML = `<img src="https://i.imgur.com/1pxafbU.png" style="height: 250px;">`
+        }
+    }
+</script>
+</html>

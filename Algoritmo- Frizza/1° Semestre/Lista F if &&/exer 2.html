@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Direito do governo</h2>
+
+    Qual a renda do usuário?
+    <input id="ipt_usuario" placeholder="Renda Familiar"><br><br>
+
+    Qual a renda total da familia?
+    <input id="ipt_familia" placeholder="Renda Familiar"><br><br>
+
+    <button onclick="verificar ()">Verificar o auxílio</button><br><br>
+       
+    <div id="div_msg"></h2></div>
+
+</body>
+</html>
+<script>
+    function verificar (){
+        if (ipt_usuario.value <= 1050 && ipt_familia.value <= 2100) {div_msg.innerHTML ="Você terá direito!"} 
+        else{div_msg.innerHTML = "Você NÃO terá direito"}
+    }
+
+
+
+
+</script>

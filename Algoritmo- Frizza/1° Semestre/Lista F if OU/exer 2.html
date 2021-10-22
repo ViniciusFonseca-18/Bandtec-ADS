@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 2</title>
+</head>
+<body>
+    <h2>Processo seletivo da faculdade Mentes Brilhantes</h2>
+
+    Informe a sua nota no enem:
+    <input id="ipt_enem" placeholder="Nota do Enem"><br><br>
+
+    Informe sua nota no vestibular interno:
+    <input id="ipt_vest" placeholder="Nota vestibular interno"><br><br>
+
+    <button onclick="avaliação ()">Avaliação</button>
+
+</body>
+</html>
+<script>
+   function avaliação (){
+   if (ipt_enem.value >= 800 || ipt_vest.value >= 700) {alert("Parabéns! Você foi Aprovado")
+        
+    } else {alert("Tente semestre que vem")
+        
+    }}
+
+
+</script>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina do Vini</title>
+</head>
+<body>
+    Qual a sua <b>Cidade Natal?</b>
+     <input id="natal" type="text" placeholder="Cidade natal"><br>
+     
+     Qual ano de <b>Nascimento?</b>
+     <input id="ano" type="text" placeholder="Ano de nascimento"> <br><br>  
+ 
+     <button onclick="cad()">CADASTRAR</button>
+      <br>
+      <div id="div_msg"></div>         
+        
+</body>
+</html>
+
+<script>
+
+function cad() {
+    div_msg.innerHTML += "Você nasceu na cidade de" + " " + "<b>" + natal.value + "</b>" + " " + "em" + " " + "<u>" + ano.value + "</u>" + "<br>"  
+    natal.value = " "
+    ano.value = " "
+}
+</script>

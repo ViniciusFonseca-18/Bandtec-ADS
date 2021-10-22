@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 9 Else</title>
+</head>
+<body>
+    <h2>Qual será o animal?</h2>
+    
+    <select id="especie"><br><br>
+        <option>Mostrar as espécies</option>
+        <option>Ovíparos</option>
+        <option>Mamiferos</option>
+
+       
+    </select>
+   
+    <button onclick="selecionar ()">Selecionar</button>
+
+    <div id="div_oviparo"></div>
+
+    <div id="div_mamifero"></div>
+
+</body>
+</html>
+<script>
+    function selecionar (){div_oviparo.innerHTML = `<select id=oviparo>Olá</select>
+        <option>Escolha um Ovíparo</option>
+        <option>Galinha</option>
+        <option>Peixe</option>
+        <option>Galinha</option>`
+    }
+
+
+</script>

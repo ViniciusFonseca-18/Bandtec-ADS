@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 9</title>
+</head>
+<body>
+    <h2>Nota do aluno da Bandtec</h2>
+
+    <button onclick="gerar()"style="height: 20px;">Gerar uma nota de aluno entre 3 e 10</button><br>
+    <div id="div1"></div><br><br>
+
+    <button onclick="sortear()" style="height: 20px;">Gerar uma frequência de aluno entre 50 e 100</button><br>
+    <div id="div2"></div><br><br>
+
+    <button onclick="aprovado()" style="height: 40px;">Aprovado ?</button><br>
+    <div id="div_aprov"></div>
+</body>
+</html>
+<script>
+    
+    var ax1=0;
+    
+    var ax2 =0;
+    
+     function gerar(){
+        ax1 = Math.random();
+        ax1 = (ax1 * 7 + 3).toFixed(1);
+        div1.innerHTML = `A sua nota é ${ax1}`;
+    }
+    function sortear(){
+        ax2 = Math.random();
+        ax2 = (ax2 * 50 + 50).toFixed(1);
+        div2.innerHTML = `Sua frequência foi ${ax2}`;
+    }
+    function aprovado(){
+        if (ax1 >=6 && ax2 >=75) {alert(`O aluno foi aprovado`)
+            
+        } else {(alert(`O aluno foi reprovado`))
+            
+        }  
+    }
+</script>

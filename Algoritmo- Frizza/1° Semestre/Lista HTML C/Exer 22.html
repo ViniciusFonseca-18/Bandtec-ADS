@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exer 22</title>
+</head>
+<body>
+   <h2>Entregas Motoboys</h2>
+    Entregas para ZN 
+    <input id="ipt_zn" placeholder="Entregas ZN"><br><br>
+   
+    Entregas para ZL 
+    <input id="ipt_zl" placeholder="Entregas ZL"><br><br>
+   
+    Entregas para ZO 
+    <input id="ipt_zo" placeholder="Entregas ZO"><br><br>
+  
+    Entregas para ZS
+    <input id="ipt_zs" placeholder="Entregas ZS"><br><br>
+
+    <button onclick="agenda ()">Carregar Agenda</button><br><br>
+    <div id=div_msg></div>
+</body>
+</html>
+<script>
+
+function agenda (){
+ div_msg.innerHTML =  `Entregas ZN: ${ipt_zn.value} entregas <br>
+                      Entregas ZL: ${ipt_zl.value} entregas <br>
+                      Entregas ZO: ${ipt_zo.value} entregas<br>
+                      Entregas ZS: ${ipt_zs.value} entregas`
+   
+                      div_msg= " "
+                    }
+
+
+
+
+
+
+</script>

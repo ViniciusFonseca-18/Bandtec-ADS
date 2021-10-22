@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+
+    Entre com o primeiro número:
+    <input id="primeiro"><br>
+
+    Entre com o segundo número:
+    <input id="segundo"><br>
+
+    <button onclick="mostrar()">Mostrar</button>
+    <span id="span_msg"></span>
+
+</body>
+
+</html>
+<script>
+
+
+
+
+
+    function mostrar() {
+
+        var inicial = Number(primeiro.value);
+
+        var final = Number(segundo.value);
+
+        span_msg.innerHTML = " "
+
+        while (inicial <= final) {
+            if (inicial % 2 == 0) {
+                span_msg.innerHTML += `<br> ${inicial}`;
+            }
+            inicial++; 
+        }
+    }
+
+
+
+
+
+</script>
