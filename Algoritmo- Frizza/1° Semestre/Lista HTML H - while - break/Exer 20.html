@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 20</title>
+</head>
+
+<body>
+
+    <h2>Exercicio 20</h2>
+
+    <button onclick="mostre()">Curto 3 e 5</button><br>
+
+    <span id="span_msg"></span>
+
+
+</body>
+
+</html>
+<script>
+
+    function mostre() {
+
+        ax_cont = 0;
+
+        while (ax_cont <= 100) {
+
+            if (ax_cont % 3 == 1 || ax_cont % 5 == 1) {
+
+                span_msg.innerHTML += `<br> ${ax_cont}`
+
+            } else if (ax_cont % 3 == 0 && ax_cont % 5 == 0) {
+
+                span_msg.innerHTML += `<br> ${ax_cont} É TRI ! É PENTA !`
+
+            } else if (ax_cont % 3 == 0) {
+
+                span_msg.innerHTML += `<br> ${ax_cont} É TRI !`
+
+            } else if (ax_cont % 5 == 0) {
+
+                span_msg.innerHTML += `<br> ${ax_cont} É PENTA !`
+
+            }
+            ax_cont++;
+        }
+
+    }
+
+
+</script>

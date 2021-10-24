@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 5 </title>
+</head>
+<body>
+    
+    <h2>Números cabalísticos</h2>
+
+    <button onclick="mostre()">Mostre</button>
+    <span id="span_msg"></span>
+
+</body>
+</html>
+<script>
+
+    function mostre(){
+
+        ax_contador = 0;
+
+        while (ax_contador < 15) {
+    
+            ax_contador ++;
+    
+            if (ax_contador = 3 || ax_contador = 4 || ax_contador = 7 || ax_contador = 10 || ax_contador = 12) { ax_contador ++}
+
+                span_msg.innerHTML += `<br> ${ax_contador}`   
+            
+        }
+            
+        
+    }
+
+
+</script>

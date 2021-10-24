@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 18</title>
+</head>
+
+<body>
+
+    <h2>Locomoção para Bandtec</h2>
+
+    Insira quantos ônibus precisa pegar:
+    <input id="ipt_bus" placeholder="Quantidade de Busão"><br><br>
+
+    Insira quantos trens precisa pegar:
+    <input id="ipt_trem" placeholder="Quantidade de Trens"><br><br>
+
+    Insira quantos metrôs precisa pegar:
+    <input id="ipt_metro" placeholder="Quantidade de Metrôs"><br><br>
+
+    <button onclick="mostre()"> # Partiu Trajeto </button><br><br>
+
+    <span id="msg_bus"></span><br>
+
+    <span id="msg_trem"></span><br> 
+
+    <span id="msg_metro"></span><br>
+
+</body>
+
+</html>
+<script>
+
+    function mostre() {
+
+        ax_cont = 1;
+
+        msg_bus.innerHTML = ``
+
+        msg_trem.innerHTML = ``
+
+        msg_metro.innerHTML = ``
+
+        while (ax_cont <= ipt_bus.value && ax_cont <= ipt_trem.value && ax_cont <= ipt_metro.value ) {
+
+            msg_bus.innerHTML += `<br><span style="color:red;">Pegando o ${ipt_bus.value}° Busão</span>`
+            
+            msg_trem.innerHTML += `<br><span style="color:grenn;">Pegando o ${ipt_trem.value}° Trem</span>` 
+            
+            msg_metro.innerHTML += `<br><span style="color:blue;">Pegando o ${ipt_metro.value}° Metrô</span>`
+            
+            ax_cont ++;
+        
+        }
+    }
+
+
+</script>

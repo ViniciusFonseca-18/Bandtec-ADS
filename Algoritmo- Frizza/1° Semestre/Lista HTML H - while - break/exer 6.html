@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 6</title>
+</head>
+
+<body>
+
+    <h2>Quem você ama</h2>
+
+    Qual o nome da pessoa que você mais ama na vida:
+    <input id="ipt_nome" placeholder="Nome da pessoa Amada(o)"><br><br>
+
+    Quanto você ama:
+    <input id="ipt_ama" placeholder="De 1 a 100"><br><br>
+
+    <button onclick="mostre()">Espessar o Amor</button><br><br>
+
+    <span id="span_msg"></span>
+
+</body>
+
+</html>
+<script>
+
+    function mostre() {
+  
+        span_msg.innerHTML = ``;
+  
+        ax_cont = 1;      
+
+        while (ax_cont <= ipt_ama.value) {
+
+            span_msg.innerHTML += `${ax_cont} - <b>${ipt_nome.value}</b> eu te amo! Sempre lembre disso! <br>`;
+
+            ax_cont++;
+
+        }
+    }
+
+
+</script>

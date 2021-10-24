@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 19</title>
+</head>
+
+<body>
+
+    <h2>Locomoção para Bandtec</h2>
+
+    Insira quantos ônibus precisa pegar:
+    <input id="ipt_bus" placeholder="Quantidade de Busão"><br><br>
+
+    Insira quantos trens precisa pegar:
+    <input id="ipt_trem" placeholder="Quantidade de Trens"><br><br>
+
+    Insira quantos metrôs precisa pegar:
+    <input id="ipt_metro" placeholder="Quantidade de Metrôs"><br><br>
+
+    <button onclick="Partiu ()"> # Partiu Trajeto </button><br><br>
+
+    <span id="msg_bus"></span><br>
+
+    <span id="msg_trem"></span><br> 
+
+    <span id="msg_metro"></span><br>
+
+</body>
+
+</html>
+<script>
+
+    function Partiu() {
+
+        ax_cont = 1;
+
+        msg_bus.innerHTML = ``
+
+        msg_trem.innerHTML = ``
+
+        msg_metro.innerHTML = ``
+
+        while (ax_cont <= ipt_bus.value && ax_cont <= ipt_trem.value && ax_cont <= ipt_metro.value ) {
+
+            if (ax_cont == 2) {
+            msg_bus.innerHTML += `<br><span style="color:red;">Pegando o ${ax_cont}° Busão e estou começando a ficar cansando</span>`    
+            } else {msg_bus.innerHTML += `<br><span style="color:red;">Pegando o ${ax_cont}° Busão</span>`}
+          
+            if(ax_cont == 3){
+                msg_trem.innerHTML += `<br><span style="color:grenn;">Pegando o ${ax_cont}° Trem e já estou cansado</span>`
+            }else{msg_trem.innerHTML += `<br><span style="color:grenn;">Pegando o ${ax_cont}° Trem</span>`}
+             
+            
+            msg_metro.innerHTML += `<br><span style="color:blue;">Pegando o ${ax_cont}° Metrô</span>`
+            
+            ax_cont ++;
+        
+        }
+    }
+    </script>
