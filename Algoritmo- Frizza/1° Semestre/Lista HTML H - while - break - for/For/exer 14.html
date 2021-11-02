@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 14</title>
+</head>
+
+<body>
+
+    <h2>Banco azzirf</h2>
+
+    informe quantos depósitos você fez no Banco:
+    <input id="ipt_qtde" type="number"><br><br>
+
+    informe o valor de cada depósito:
+    <input id="ipt_dep" type="number"><br><br>
+
+    <button onclick="mostrar()">Acompanhar a Grana</button>
+
+    <div id="div_msg"></div>
+
+</body>
+
+</html>
+<script>
+
+
+
+    function mostrar() {
+
+        var ok = " ";
+
+        var certo = " ";
+
+        var soma = Number(ipt_dep.value)
+
+        // if de confirmação
+        if (ipt_qtde.value >= 3 && ipt_qtde.value <= 24) {
+            ok = "true"
+        } else { alert(`Número inserido incorretamente (O número inserido deve  m estar entre 3 e 24)`) }
+
+        if (ipt_dep.value >= 1000) {
+            certo = "true"
+        } else { alert(`Número inserido incorretamente (O número inserido devem ser maior que 1000)`) }
+
+        if (ok == "true" && certo == "true") {
+            
+            for (var ax_cont = 1; ax_cont <= Number(ipt_qtde.value); ax_cont++) {
+
+                div_msg.innerHTML += `${ax_cont}° Mês: R$ ${soma}.00 <br><br> `
+
+                soma = soma + Number(ipt_dep.value);
+                }
+
+            }
+
+    }
+
+    
+
+</script>

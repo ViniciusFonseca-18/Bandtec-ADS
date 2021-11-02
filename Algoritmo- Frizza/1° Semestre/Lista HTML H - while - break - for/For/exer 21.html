@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 21</title>
+</head>
+
+<body>
+
+    <h2>Sorteio do seu número da Sorte</h2>
+
+    informe o seu número da sorte:
+    <input id="ipt_sorte" placeholder="Entre 0 e 100"></input><br><br>
+
+    <button onclick="valendo()">Valendo !</button>
+
+</body>
+
+</html>
+<script>
+    function valendo() {
+
+        if (ipt_sorte.value < 0 || ipt_sorte.value > 100) {
+            alert(`O seu número da sorte está incorreto (<b> ELE DEVE ESTAR ENTRE 0 E 100 </b>) `)
+        } else {
+
+            ax_sorteado = '';
+
+            ax_sorteado = '';
+
+            for (var ax_cont = 0; ax_cont <= 120; ax_cont++) {
+
+                ax_sorteado = (Math.random * 100).toFixed;
+
+                if (ipt_sorte.value == ax_sorteado) {
+
+                    alert(` Foram necessários ${ax_cont} sorteios para sortear o ${ipt_sorte.value}`)
+                }
+
+
+            }
+        }
+    }
+</script>

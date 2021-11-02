@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 19</title>
+</head>
+
+<body>
+
+    <h2>Informe a sua idade</h2>
+
+    Digite a sua idade:
+    <input id="ipt_idade" onchange="mostrar()"><br><br>
+
+    <div id="div_msg"></div>
+
+</body>
+
+</html>
+<script>
+    function mostrar() {
+
+        div_msg.innerHTML = '';
+
+        for (var index = 0; index <= ipt_idade.value; index++) {
+
+            if (ipt_idade.value < 0 && ipt_idade.value > 125) {
+
+                alert(`A idade informa não está incorreta `)
+
+            } else if (index >= 0 && index <= 4) {
+
+                div_msg.innerHTML += `<br> ${index} anos (Primeira Infância)`
+
+            } else if (index == 5 || index == 6) {
+
+                div_msg.innerHTML += `<br> ${index} anos (Pré Escola)`
+
+            } else if (index >= 7 && index < 12) {
+
+                div_msg.innerHTML += `<br> ${index} anos (Segunda Infância)`
+
+            } else if (index >= 12 && index <= 18) {
+
+                div_msg.innerHTML += `<br> ${index} anos (Adolecência)`
+
+            } else if (index >= 19 && index <= 59) {
+
+                div_msg.innerHTML += `<br> ${index} anos (Adulto)`
+
+            } else if (ipt_idade.value >= 60 && ipt_idade.value <= 125) {
+
+                div_msg.innerHTML += `<br> ${index} anos (Velhice)`
+
+            }
+        }
+    }
+</script>

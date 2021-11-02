@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 20</title>
+</head>
+
+<body>
+
+    <h2>Você tem sorte no amor tem azar no jogo ?</h2>
+
+    <button onclick="ver()">Ver minha Sorte</button><br><br>
+    <div id="div_img"></div><br><br>
+    <div id="div_msg"></div>
+
+</body>
+
+</html>
+<script>
+    function ver() {
+
+        div_img.innerHTML = '';
+
+        ax_sorteado = '';
+
+        ax_cartas = '';
+
+        ax_coração = '';
+
+        for (var ax_cont = 1; ax_cont <= 21; ax_cont++) {
+
+            ax_sorteado = (Math.random() * 21).toFixed();
+
+            ax_cartas = `<img style="width:100px;" src="https://st.depositphotos.com/1795881/1987/i/600/depositphotos_19871123-stock-photo-red-heart.jpg">`;
+
+            ax_coração = `<img style="width:100px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHdztt-z2679jnkb4alWKFQ0wsPLsxQhBf7Q&usqp=CAU">`
+
+            if (ax_sorteado % 2 == 0) {
+
+                div_img.innerHTML += `${ax_cartas}`
+
+            } else {
+
+                div_img.innerHTML += `${ax_coração}`
+
+            }
+
+            if (ax_cartas > ax_coração) {
+
+                div_msg.innerHTML = `Você tem mais sorte no amor`
+
+            } else if (ax_coração > ax_cartas) {
+
+                div_msg.innerHTML = `Você tem mais sorte no jogo`
+
+            }
+        }
+    }
+</script>

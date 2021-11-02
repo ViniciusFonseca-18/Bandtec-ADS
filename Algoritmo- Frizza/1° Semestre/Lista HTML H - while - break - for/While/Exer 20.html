@@ -21,22 +21,17 @@
 
 </html>
 <script>
-
     function mostre() {
 
         ax_cont = 0;
 
         while (ax_cont <= 100) {
 
-            if (ax_cont % 3 == 1 || ax_cont % 5 == 1) {
-
-                span_msg.innerHTML += `<br> ${ax_cont}`
-
-            } else if (ax_cont % 3 == 0 && ax_cont % 5 == 0) {
+            if (ax_cont % 3 == 0 && ax_cont % 5 == 0) {
 
                 span_msg.innerHTML += `<br> ${ax_cont} É TRI ! É PENTA !`
 
-            } else if (ax_cont % 3 == 0) {
+            }else if (ax_cont % 3 == 0) {
 
                 span_msg.innerHTML += `<br> ${ax_cont} É TRI !`
 
@@ -44,11 +39,12 @@
 
                 span_msg.innerHTML += `<br> ${ax_cont} É PENTA !`
 
-            }
-            ax_cont++;
+            }else{
+
+               span_msg.innerHTML += `<br> ${ax_cont}`}
+            
+               ax_cont++;
         }
 
     }
-
-
 </script>

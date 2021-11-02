@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 15</title>
+</head>
+<body>
+        <h2> Quanto o elefante incomoda </h2>
+
+        informe a quantidade de elefantes:
+        <input id="ipt_qtde" placeholder="Quantidade de Elefantes"><br><br>
+
+        <button onclick="mostrar()">Atazanar o médium</button><br><br>
+        
+        <div id=div_msg></div>
+
+
+</body>
+</html>
+<script>
+
+    function mostrar(){
+    
+        div_msg.innerHTML = '';
+    
+        var ax_cont = 2;
+
+        var elefante = 'incomodam';
+
+        while( ax_cont <= ipt_qtde.value){
+           
+            elefante += ' incomodam ';
+
+                div_msg.innerHTML += `1 elefante incomodam muita gente! ${ax_cont} elefantes ${elefante} muito mais ! <br><br> `
+            
+            
+            ax_cont ++;
+        }
+    }
+
+</script>

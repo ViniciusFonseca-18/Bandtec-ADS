@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercicio 22</title>
+  </head>
+
+  <body>
+    <h2>Sorteio do Frizza HUUUIAAAAA</h2>
+
+    <div id="desaparecer" style="display: block">
+      Quantos números serão sorteados:
+      <input
+        id="ipt_qtde"
+        placeholder="Maior que 10 e Menos que 50"
+        style="width: 180px"
+      /><br /><br />
+      Informe qual a divisibilidade quer encontrar:
+      <input id="ipt_divi" placeholder="Entre 1 e 10" /><br /><br />
+
+      <button onclick="sortear()">Sortear</button><br /><br />
+    </div>
+
+    <div id="aparecer" style="display: none">
+      <div id="div_msg"></div>
+
+      <div id="div_msg2"></div>
+      <br /><br />
+
+      <button onclick="mostrar()">Voltar</button>
+    </div>
+  </body>
+</html>
+<script>
+
+
+  function sortear() {
+    // variaveis
+    var ok = "";
+
+    var certo = "";
+
+    var ax_cont = 0;
+
+    var ax_maior = "";
+
+    var ax_menor = 101;
+
+    var ax_media = 0;
+
+    // if`s de confirmação
+    if (ipt_qtde.value < 10 && ipt_qtde.value > 50) {
+      alert(`ERROR 404 : NUMERO DE SORTEIO INSERIDO INCORRETAMENTE `);
+    } else {
+      ok = "true";
+    }
+
+    if (ipt_divi.value >= 1 && ipt_divi.value <= 10) {
+      certo = "true";
+    } else {
+      alert(`ERROR 404: NUMERO DA DIVISIBILIDADE INSERIDO INCORRETAMENTE`);
+    }
+
+    if (ok == "true" && certo == "true") {
+      desaparecer.style.display = "none";
+
+      aparecer.style.display = "block";
+    }
+
+    // Sorteio de números aleatórios
+    while (ax_cont < ipt_qtde.value) {
+      var sorte = Number((Math.random() * 99 + 1).toFixed());
+
+      if (sorte % ipt_divi.value == 0) {
+        div_msg.innerHTML += `<br><span style="color:red;">${sorte}</span>`;
+      } else {
+        div_msg.innerHTML += `<br> ${sorte}`;
+      }
+
+      while (sorte > ax_maior) {
+        ax_maior = sorte;
+      }
+
+      while (sorte < ax_menor) {
+        ax_menor = sorte;
+      }
+
+      ax_media += Number(sorte);
+
+      ax_cont++;
+
+      div_msg2.innerHTML = ` <br><br> O maior número sorteado foi: ${ax_maior}<br><br>
+
+                    O menor número sorteado foi: ${ax_menor}<br><br>
+
+                    A média de todos os números sorteados é: ${
+                      ax_media / ax_cont
+                    } <br><br> `;
+    }
+  }
+
+  function mostrar() {
+    div_msg.innerHTML = "";
+
+    div_msg2.innerHTML = "";
+
+    ipt_qtde.value = "";
+
+    ipt_divi.value = "";
+
+    desaparecer.style.display = "block";
+
+    aparecer.style.display = "none";
+  }
+</script>

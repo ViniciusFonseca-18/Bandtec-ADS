@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h2>Informe uma frase para o pagagaio</h2>
+
+    informe um número:
+    <input id="ipt_num" type="number"><br><br>
+
+    Informe uma frase:
+    <input id="ipt_frase"><br><br>
+
+    <button onclick="mostrar()">Papagaio</button><br><br>
+
+    <div id="div_msg"></div>
+</body>
+</html>
+<script>
+
+    function mostrar(){
+
+        ax_frase = ipt_frase.value
+
+        for (var ax_cont = 1; ax_cont <= ipt_num.value; ax_cont++) {
+            
+            
+            alert(`${ipt_frase.value}<br><br>`) 
+
+
+
+        }
+
+
+    }
+
+
+
+
+</script>

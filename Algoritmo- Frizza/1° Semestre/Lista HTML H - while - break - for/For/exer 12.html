@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 12</title>
+</head>
+<body>
+    
+    <h2>Coca-Cola</h2>
+
+    Informe a quantidade de coca-cola você acha que bebeu na vida
+    <input id="ipt_qtde" type="number">
+
+    <button onclick="ver()">Ver</button>
+
+    <div id="div_img"></div>
+
+</body>
+</html>
+<script>
+
+    function ver(){
+
+        div_img.innerHTML = '';
+
+        for (var ax_cont = 1; ax_cont < Number(ipt_qtde.value); ax_cont++){
+        
+            div_img.innerHTML += `<img style="width:80px; " src="https://www.paodeacucar.com/img/uploads/1/280/677280.jpg" <br><br>`;
+        }
+    }
+        
+
+</script>

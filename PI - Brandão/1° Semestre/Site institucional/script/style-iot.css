@@ -1,0 +1,10 @@
+h1 {
+    color: purple;
+}
+
+p {
+    color: green;
+    font-size: 30px;
+    font-family: monospace;
+    font-weight: 900;
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 15</title>
+</head>
+
+<body>
+
+    <h2>Banco Azzirf</h2>
+
+    informe quantos depósitos você fez no Banco:
+    <input id="ipt_qtde" type="number"><br><br> informe o valor de cada depósito:
+    <input id="ipt_dep" type="number"><br><br>
+
+    <button onclick="mostrar()">Acompanhar a Grana</button>
+
+    <div id="div_msg"></div>
+
+</body>
+
+</html>
+<script>
+    function mostrar() {
+
+        div_msg.innerHTML = '';
+
+        // variaveis
+        var ok = " ";
+
+        var certo = " ";
+
+        var soma = Number(ipt_dep.value)
+
+        var adicionar = 3;
+
+        var total = 0;
+
+        // if de confirmação
+        if (ipt_qtde.value >= 3 && ipt_qtde.value <= 24) {
+            ok = "true"
+        } else {
+            alert(`Número inserido incorretamente (O número inserido deve  m estar entre 3 e 24)`)
+        }
+
+        if (ipt_dep.value >= 1000) {
+            certo = "true"
+        } else {
+            alert(`Número inserido incorretamente (O número inserido devem ser maior que 1000)`)
+        }
+
+        if (ok == "true" && certo == "true") {
+
+            // item de repetição
+            for (var ax_cont = 1; ax_cont <= Number(ipt_qtde.value); ax_cont++) {
+
+                if (soma % 3 == 0) {
+
+                    soma += soma * 0.01;
+
+                    div_msg.innerHTML += ` ${ax_cont}° Mês: R$ ${soma.toFixed(2)} <br><br> `
+
+                } else {
+                    div_msg.innerHTML += `${ax_cont}° Mês: R$ ${soma.toFixed(2)} <br><br>`
+                }
+
+                total = soma
+
+                soma = soma + Number(ipt_dep.value);
+
+
+            }
+
+            div_msg.innerHTML += `<br><br> Total guardado: R$${total}`;
+        }
+
+    }
+</script>
