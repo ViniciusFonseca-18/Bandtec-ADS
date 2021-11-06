@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercicio 15</title>
+    <title>Exercicio 16</title>
 </head>
 
 <body>
@@ -13,10 +13,10 @@
     <h2>Banco Azzirf</h2>
 
     informe quantos depósitos você fez no Banco:
-    <input id="ipt_qtde" type="number"><br><br> informe o valor de cada depósito:
-    <input id="ipt_dep" type="number"><br><br>
+    <input id="ipt_qtde" placeholder="Entre 3 e 24 "><br><br> informe o valor de cada depósito:
+    <input id="ipt_dep" placeholder="A partir de R$ 1000"><br><br>
 
-    <button onclick="mostrar()">Acompanhar a Grana</button>
+    <button onclick="mostrar()">Acompanhar a Grana</button><br>
 
     <div id="div_msg"></div>
 
@@ -61,7 +61,7 @@
 
                     soma += soma * 0.01;
 
-                    div_msg.innerHTML += ` ${ax_cont}° Mês: R$ ${soma.toFixed(2)} <br><br> `
+                    div_msg.innerHTML += ` ${ax_cont}° Mês: R$ ${soma.toFixed(2)} <br><br><img src="https://imagepng.org/wp-content/uploads/2017/10/estrela.png" height="20px";>`
 
                 } else {
                     div_msg.innerHTML += `${ax_cont}° Mês: R$ ${soma.toFixed(2)} <br><br>`

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extrato</title>
+</head>
+
+<body>
+
+    <h2>Extrato Bancário</h2>
+
+    Informe o seu nome:
+    <input id="ipt_nome" placeholder="Seu Nome Completo"><br><br>
+
+    Informe seu Banco:
+    <input id="ipt_banco" placeholder="Deve ser o 001, 102, 237 ou 341"><br><br>
+
+    informe a sua Agência:
+    <input id="ipt_ag" placeholder="Entre 0 e 999"><br><br>
+
+    informe a Conta:
+    <input id="ipt_conta" placeholder="Entre 0 e 99999"><br><br>
+
+    Informe o digíto:
+    <input id="ipt_dig" placeholder=""><br><br>
+
+    <button onclick="entrar()">Entre</button><br><br>
+
+    <div id="div_msg"></div>
+
+</body>
+
+</html>
+<script>
+
+    function entrar() {
+
+        ax_resto11 = Number(ipt_dig.value) % 11;
+
+        ax_resto10 = (ax_resto11) % 10;
+
+        if (ipt_nome.value.length < 3) {
+
+            alert(`O campo do Nome está incorreto : Deve ter pelo menos 3 caracteres`)
+
+        } else {
+
+            if (ipt_banco.value != 001 && ipt_banco.value != 102 && ipt_banco.value != 237 && ipt_banco.value != 341) {
+
+                alert(`O campo do Banco está incorreto : Deve ser o 001, 102, 237 ou 341`)
+            }
+
+            else {
+               
+                if (ipt_ag.value < 0 || ipt_ag.value < 999) {
+
+                    alert(`O campo da agência está incorreto : O número inserido deve estar entre 0 e 999 `)
+
+                } else {
+
+                    if (ipt_conta.value < 0 || ipt_conta.value > 99999) {
+
+                        alert(`O campo da Conta está incorreto : O número inserido deve estar entre 0 e 99999`)
+
+                    } else {
+
+                        if (ax_resto11 == 1) {
+
+                            alert(`O número não é divisil por onze (11)`)
+
+                        } else {
+
+                            if (ax_resto10 == 1) {
+
+                                alert(`O número não é divisil por dez (10)`)
+
+                            } else alert(`As informações estão corretas`)
+                        }
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+
+
+
+
+</script>

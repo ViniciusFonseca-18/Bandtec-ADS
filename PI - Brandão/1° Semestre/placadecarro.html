@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placas de Carro</title>
+</head>
+<body>
+    
+    <h1>Consultar as placas de Carros  </h1>
+
+    digite uma placa:
+    <input id="ipt_placa">
+
+    <button onclick="buscarPlaca()">Buscar a Placa</button>
+
+    <h1 id="modelo">Meu  Carro</h1>
+    <h1 id="ano">Meu  Carro</h1>
+    <h1 id="cor">Meu  Carro</h1>
+    <h1 id="marca">Meu  Carro</h1>
+    <h1 id="chassi">Meu  Carro</h1>
+    <h1 id="uf">Meu  Carro</h1>
+
+
+
+</body>
+</html>
+<script>
+
+    function buscarPlaca(){
+
+        fetch(`https://apicarros.com/v1/consulta/${ipt_placa.value}/json`)
+        
+        .then(function(resultado){
+        
+            resultado.json() 
+            .then(function(json){
+                
+                modelo.innerHTML = json.modelo
+                ano.innerHTML = json.ano
+                cor.innerHTML = json.cor
+                marca.innerHTML = json.marca
+                chassi.innerHTML = json.chassi
+                uf.innerHTML = json.uf
+
+                console.log(json);
+            })
+
+            .catch(function(error){
+                console.log(error);
+            })
+        })
+    
+    
+    }
+
+
+
+
+
+
+</script>

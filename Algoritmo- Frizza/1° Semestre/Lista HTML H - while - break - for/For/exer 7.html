@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 7</title>
+</head>
+
+<body>
+
+    Informe o limite superior da amostragem:
+    <input id="ipt_lim" placeholder="Entre 5 e 100"><br><br>
+
+    <button onclick="contar()">Contar</button><br><br>
+
+    <div id="div_msg"></div>
+
+
+</body>
+
+</html>
+<script>
+    function contar() {
+
+        div_msg.innerHTML = '';
+
+        for (let index = 5; index <= ipt_lim.value; index++) {
+
+            if (ipt_lim.value < 5 || ipt_lim.value > 100) {
+                alert(`O número inserido está incorreto 
+                (Deve ser entre 5 e 100)`)
+            }
+            div_msg.innerHTML += ` <br> ${index}`
+
+        }
+    }
+</script>

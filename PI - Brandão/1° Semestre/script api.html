@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chamada para ViaCep</title>
+</head>
+<body>
+    
+   
+   Digite seu Cep:
+   <input id="ipt_cep">
+
+   <button onclick="buscarDados()">Buscar Cep</button>
+
+   
+   
+    <h1 id="rua">Minha Rua</h1>
+    <h1 id="cep">Minha Rua</h1>
+    <h1 id="cidade">Minha Rua</h1>
+    <h1 id="DDD">Minha Rua</h1>
+
+
+</body>
+</html>
+<script>
+
+
+
+    function buscarDados(){
+
+        fetch(`https://viacep.com.br/ws/${ipt_cep.value}/json/`)
+        
+        .then(function(resultado){
+        
+            resultado.json() 
+            .then(function(json){
+                
+                rua.innerHTML = json.logradouro
+                cep.innerHTML = json.cep 
+                cidade.innerHTML = json.localidade
+                DDD.innerHTML = json.ddd
+
+                console.log(json);
+            })
+
+            .catch(function(error){
+                console.log(error);
+            })
+        })
+    
+    
+    }
+
+
+
+
+</script>
