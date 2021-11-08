@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 
 <head>
     <meta charset="UTF-8">
@@ -12,30 +12,41 @@
 
     <h2>Extrato Bancário</h2>
 
-    Informe o seu nome:
-    <input id="ipt_nome" placeholder="Seu Nome Completo"><br><br>
+    <div id="desaparecer" style="display: block;">
+        Informe o seu nome:
+        <input id="ipt_nome" placeholder="Seu Nome Completo"><br><br> Informe seu Banco:
+        <input id="ipt_banco" placeholder="Deve ser o 001, 102, 237 ou 341"><br><br> informe a sua Agência:
+        <input id="ipt_ag" placeholder="Entre 0 e 999"><br><br> informe a Conta:
+        <input id="ipt_conta" placeholder="Entre 0 e 99999"><br><br> Informe o digíto:
+        <input id="ipt_dig" placeholder=""><br><br>
 
-    Informe seu Banco:
-    <input id="ipt_banco" placeholder="Deve ser o 001, 102, 237 ou 341"><br><br>
+        <button onclick="entrar()">Entre</button><br><br>
 
-    informe a sua Agência:
-    <input id="ipt_ag" placeholder="Entre 0 e 999"><br><br>
+    </div>
 
-    informe a Conta:
-    <input id="ipt_conta" placeholder="Entre 0 e 99999"><br><br>
+    <div id="aparecer" style="display: none;">
 
-    Informe o digíto:
-    <input id="ipt_dig" placeholder=""><br><br>
+        <select id="id_select">
 
-    <button onclick="entrar()">Entre</button><br><br>
+            <option value="Débito">Débito</option>
+            <option value="Crédito">Crédito</option>
 
-    <div id="div_msg"></div>
+        </select><br> informe a data:
+        <input id="ipt_dia" placeholder="Dia"><input id="ipt_mes" placeholder="mês"><input id="ipt_ano"
+            placeholder="Ano"><br><br> informe o valor da movimentação:
+        <input id="ipt_mov">
 
+        <button onclick="extrato()">Extrato</button><br><br>
+
+        <button onclick="voltar()">Mudar de Conta</button><br><br>
+
+        <div id="div_msg"></div>
+
+    </div>
 </body>
 
 </html>
 <script>
-
     function entrar() {
 
         ax_resto11 = Number(ipt_dig.value) % 11;
@@ -51,10 +62,8 @@
             if (ipt_banco.value != 001 && ipt_banco.value != 102 && ipt_banco.value != 237 && ipt_banco.value != 341) {
 
                 alert(`O campo do Banco está incorreto : Deve ser o 001, 102, 237 ou 341`)
-            }
+            } else {
 
-            else {
-               
                 if (ipt_ag.value < 0 || ipt_ag.value < 999) {
 
                     alert(`O campo da agência está incorreto : O número inserido deve estar entre 0 e 999 `)
@@ -76,8 +85,12 @@
                             if (ax_resto10 == 1) {
 
                                 alert(`O número não é divisil por dez (10)`)
+                            }
 
-                            } else alert(`As informações estão corretas`)
+                            aparecer.style.display = 'block';
+
+                            desaparecer.style.display = 'none';
+
                         }
                     }
 
@@ -88,6 +101,55 @@
         }
 
     }
+
+    function extrato() {
+
+        ax_saldoini = Number(ax_saldofin);
+
+        ax_saldofin = Number(ipt_mov.value) + Number(ax_saldoini);
+
+
+        div_msg.innerHTML = `Linha de extrato
+        ${ipt_dia.value}/${ipt_mes.value}/${ipt_ano.value} - Saldo inicial: R$${ax_saldoini} 
+        Operação:${id_select.value} 
+        valor da Movimentação :R$ ${ipt_mov.value} 
+        Saldo final= R$ ${ax_saldofin}`
+
+    }
+
+    function voltar() {
+
+        aparecer.style.display = 'none';
+
+        desaparecer.style.display = 'block';
+
+        
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

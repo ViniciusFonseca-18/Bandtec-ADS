@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 1</title>
+</head>
+<body>
+    
+    <h2>Frutas</h2>
+
+    Informe o nome da fruta:
+    <input id="ipt_fruta" placeholder="Nome da fruta"><br><br>
+
+    <button onclick="pesquisar()">Pesquisar</button><br><br>
+
+    <div id="div_msg"></div>
+
+</body>
+</html>
+<script>
+
+    function pesquisar() {  
+
+        var vet_fruta = ["banana","maça","uva","pera","laranja","melancia","manga"];
+        
+        valor = vet_fruta.indexOf(ipt_fruta.value)
+        
+        if(valor < 0){div_msg.innerHTML = `Não existe a fruta ${ipt_fruta.value} na lista e está na ${valor} posição`
+            
+        }else{div_msg.innerHTML = `Existe a fruta ${ipt_fruta.value} na lista`}
+    
+    }
+
+
+
+
+</script>
