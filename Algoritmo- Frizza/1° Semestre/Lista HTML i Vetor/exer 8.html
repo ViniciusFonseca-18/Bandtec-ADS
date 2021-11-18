@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 8</title>
+</head>
+
+<body>
+
+    <h2>Nome dos alunos</h2>
+
+    Informe os nomes dos alunos:
+    <input id="ipt_aluno" placeholder="Nome dos alunos">
+
+    <button onchange="cadastrar()">Mostrar</button>
+
+    <div id="div_msg"></div>
+
+</body>
+
+</html>
+<script>
+    function cadastrar() {
+
+        vet_alunos = []
+
+        vet_alunos.push(ipt_aluno.value)
+
+        for (let index = vet_alunos.length - 1; index >= 0; index--) {
+
+            div_msg.innerHTML += `${vet_alunos[index]}`
+
+        }
+
+    }
+</script>

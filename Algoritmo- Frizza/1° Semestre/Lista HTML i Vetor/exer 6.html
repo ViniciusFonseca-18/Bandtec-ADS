@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 6</title>
+</head>
+
+<body>
+
+    <h2>Qual filme você mais gosta</h2>
+
+    Insira o nome do filme preferido:
+    <input id="ipt_filme"><br><br>
+
+    <button onclick="cadastrar()">Cadastrar</button><br><br>
+
+    <div id="div_msg"></div>
+
+</body>
+
+</html>
+<script>
+    function cadastrar() {
+
+        vt_filmes = []
+        vt_filmes.push(ipt_filme.value);
+
+        for (index = 0; index < vt_filmes.length; index++) {
+
+            div_msg.innerHTML += `${vt_filmes} <br>`
+
+
+        }
+
+        ipt_filme.value = '';
+    }
+</script>

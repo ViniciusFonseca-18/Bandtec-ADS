@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 10</title>
+</head>
+
+<body>
+    <h2>Qual linha de busão você pega?</h2>
+
+    insira o nome a linha que você pega:
+    <input id="ipt_bus">
+
+    <button onclick="cadastrar()">Gravar o busão</button>
+
+    <button onclick="pesquisar()">Pesquisar</button>
+
+    <div id="div_msg1"></div><br>
+
+    <div id="div_msg2"></div>
+
+</body>
+
+</html>
+<script>
+    vet_bus = []
+
+    function cadastrar() {
+
+        div_msg1.innerHTML = '';
+
+        if (ipt_bus.value.length <= 0) {
+
+            alert(`Tem que inserir uma linha de ônibus`)
+
+        } else {
+
+            vet_bus.push(ipt_bus.value)
+
+            for (var index = vet_bus.length - 1; index >= 0; index--) {
+
+                // vetor[index] - retorna o valor da posição index do vetor;
+
+                div_msg1.innerHTML += `${vet_bus[index]}<br>`
+
+            }
+
+            ipt_bus.value = '';
+
+        }
+    }
+
+    function pesquisar() {
+
+        ax_achou = 0
+
+        vet_bus.indexOf[ipt_bus.value]
+
+        if (vet_bus > 0) {
+
+            alert(`Você não inseriu uma linha de busão`)
+
+        } else {
+
+            for (let index = 0; index <= vet_bus.length - 1; index++) {
+
+                if (vet_bus[index] == ipt_bus.value) {
+
+                    ax_achou++;
+            
+                }
+            }
+
+            if (ax_achou > 0) {
+
+                div_msg2 = `Você já pegou a linha ${ax_achou} vezes, nessa ordem: ${ax_ordem}`
+
+            } else {
+
+                alert(`Você nunca pegou essa linha`)
+
+            }
+
+        }
+    }
+</script>

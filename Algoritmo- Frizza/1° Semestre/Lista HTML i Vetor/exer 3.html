@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 3</title>
+</head>
+
+<body>
+
+    <h2>Qual bairro você já morou?</h2>
+
+    Insira os Nomes dos bairros onde já morou:
+    <input id="ipt_bairro"><br><br>
+
+    <button onclick="cadastrar()">Cadastrar o Bairro</button><br><br> Insira um número (indicando o local para onde morou):
+    <input id="ipt_num" placeholder="A partir 1"><br><br>
+
+    <button id="lembrar()">Relembrar a memória</button><br><br>
+
+    <div id="div_msg"></div>
+
+</body>
+
+</html>
+<script>
+    function cadastrar() {
+
+        var vt_bairro = []
+        var vt_bairro = vt_bairro.push(ipt_bairro.value)
+
+        ipt_bairro.value = '';
+
+    }
+
+    function lembrar() {
+
+        if (ipt_num.value < 1) {
+            alert(`O número referente ao local está incorreto : O número devre ser maior que 1 `)
+
+        } else {
+
+
+
+            for (let index = Number(ipt_num.value); index <= vt_bairro.length; index++) {
+
+                div_msg.innerHTML += `<br>${index} - ${vt_bairro[index]}`
+
+            }
+
+        }
+
+    }
+</script>

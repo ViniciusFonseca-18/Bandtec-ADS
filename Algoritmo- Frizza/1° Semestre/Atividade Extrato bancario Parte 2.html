@@ -32,8 +32,7 @@
             <option value="Crédito">Crédito</option>
 
         </select><br> informe a data:
-        <input id="ipt_dia" placeholder="Dia"><input id="ipt_mes" placeholder="mês"><input id="ipt_ano"
-            placeholder="Ano"><br><br> informe o valor da movimentação:
+        <input id="ipt_dia" placeholder="Dia"><input id="ipt_mes" placeholder="mês"><input id="ipt_ano" placeholder="Ano"><br><br> informe o valor da movimentação:
         <input id="ipt_mov">
 
         <button onclick="extrato()">Extrato</button><br><br>
@@ -102,18 +101,31 @@
 
     }
 
+
+    ax_saldoini = 0;
+
+
     function extrato() {
 
-        ax_saldoini = Number(ax_saldofin);
 
-        ax_saldofin = Number(ipt_mov.value) + Number(ax_saldoini);
+        if (id_select.value == "Débito") {
 
+            ax_saldofin = Number(ax_saldoini) - Number(ipt_mov.value);
 
-        div_msg.innerHTML = `Linha de extrato
-        ${ipt_dia.value}/${ipt_mes.value}/${ipt_ano.value} - Saldo inicial: R$${ax_saldoini} 
-        Operação:${id_select.value} 
-        valor da Movimentação :R$ ${ipt_mov.value} 
-        Saldo final= R$ ${ax_saldofin}`
+        } else if (id_select.value == "Crédito") {
+
+            ax_saldofin = Number(ipt_mov.value) + Number(ax_saldoini);
+
+        }
+
+        div_msg.innerHTML += `Linha de Extrato do ${ipt_nome.value}<br>
+        ${ipt_dia.value}/${ipt_mes.value}/${ipt_ano.value}<br> 
+        Saldo inicial:R$${ax_saldoini}<br>
+        Operação:${id_select.value}<br>
+        Valor da Movimentação:R$${ipt_mov.value}<br> 
+        Saldo final= R$${ax_saldofin}<br><br>`
+
+        ax_saldoini = ax_saldofin;
 
     }
 
@@ -122,37 +134,24 @@
         aparecer.style.display = 'none';
 
         desaparecer.style.display = 'block';
+        a
+        ipt_nome.value = '';
 
-        
+        ipt_banco.value = '';
 
+        ipt_ag.value = '';
+
+        ipt_conta.value = '';
+
+        ipt_dig.value = '';
+
+        ipt_mov.value = '';
+
+        ipt_mes.value = '';
+
+        ipt_dia.value = '';
+
+        ipt_ano.value = '';
 
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </script>

@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercicio 2</title>
 </head>
+
 <body>
-    
+
     <h2>Viagem</h2>
 
-    insira o destino de Viagem:
+    Insira o destino de Viagem:
     <input id="ipt_destino"><br><br>
 
     <button onclick="adicionar()">Adicionar</button><br><br>
@@ -23,46 +25,54 @@
 
     <div id="div_msg2"></div><br><br>
 
-    <button onclick="ult_viagem()">Primeira Viagem</button><br><br>
+    <button onclick="ult_viagem()">Última Viagem</button><br><br>
 
     <div id="div_msg3"></div><br><br>
 
 </body>
+
 </html>
 <script>
+    var vt_viagem = [];
 
-    var vt_viagem = [ ];
+    function adicionar() {
 
-    function adicionar() {  
-        
         vt_viagem.push(ipt_destino.value);
-    
+
+        ipt_destino.value = "";
+
     }
 
     function pri_viagem() {
-        
-        if(vt_viagem.length >= 1 ){ div_msg1.innerHTML = `${vt_viagem[0]}` }
 
-        else{ div_msg1 = `Ainda não viajou`}
+        if (vt_viagem.length > 0) {
+
+            div_msg1.innerHTML = `${vt_viagem[0]}`
+
+        } else {
+            div_msg1.innerHTML = `Ainda não viajou`;
+        }
 
     }
 
     function tri_viagem() {
 
-        if(vt_viagem.length > 2 ){ div_msg2.innerHTML = `${vt_viagem[2]}` }
+        if (vt_viagem.length > 2) {
+            div_msg2.innerHTML = `${vt_viagem[2]}`
+        } else {
+            div_msg2.innerHTML = `Ainda não viajou`
+        }
 
-        else{ div_msg1 = `Ainda não viajou`}
-        
-        
+
     }
 
     function ult_viagem() {
-        
-        if(vt_viagem.length > 2 ){ div_msg3.innerHTML = `${vt_viagem[vt_viagem - 1]}` }
 
-        else{ div_msg1 = `Ainda não viajou`}
+        if (vt_viagem.length > 2) {
+            div_msg3.innerHTML = `${vt_viagem[vt_viagem.length -1]}`
+        } else {
+            div_msg3.innerHTML = `Ainda não viajou`
+        }
 
     }
-
-
 </script>
